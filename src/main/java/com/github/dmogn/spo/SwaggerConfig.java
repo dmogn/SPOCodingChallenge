@@ -32,7 +32,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
                 .title("Cleaning staff requirements calculation REST Endpoint")
-                .version("0.1.0")
+                .version("1.0")
                 .contact(new Contact("Dmitry Ognyannikov", "https://github.com/dmogn", "dmitry.ogn@gmail.com"))
                 .build();
     }

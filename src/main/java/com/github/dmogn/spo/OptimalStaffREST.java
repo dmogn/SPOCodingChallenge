@@ -36,6 +36,10 @@ public class OptimalStaffREST {
             return ResponseEntity.badRequest().build();
         }
         
+        if (request.getSenior() <= 0 || request.getJunior() <= 0) {
+            return ResponseEntity.badRequest().build();
+        }
+        
         for (int rooms : request.getRooms()) {
             if (rooms <=  0 || rooms > Configuration.MAX_ROOMS_COUNT_IN_STRUCTURE) {
                 return ResponseEntity.badRequest().build();
