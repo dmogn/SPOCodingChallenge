@@ -6,7 +6,7 @@
 
 **URL:** http://localhost:8080/api/v1/calculateStaffRequirements
 
-**Swagger documentation:** http://localhost:8080/v2/api-docs
+**Swagger documentation:** http://localhost:8080/swagger-ui.html
 
 **Build & run production app:**
 
