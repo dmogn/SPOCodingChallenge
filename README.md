@@ -1,12 +1,13 @@
-﻿**Language:** Java
+**Language:** Java
 
 **System Requirements:** JDK 8+, Maven
 
-**Dependencies:** Spring Boot, Lombock, JUnit 5
+**Dependencies:** Spring Boot, Lombok, JUnit 5
 
-**URL:** http://localhost:8080/api/v1/calculateStaffRequirements
+**Endpoint URL:** http://localhost:8080/api/v1/calculateStaffRequirements
 
-**Swagger documentation:** http://localhost:8080/swagger-ui.html
+**Swagger documentation:** http://localhost:8080/swagger-ui.html - UI
+http://localhost:8080/v2/api-docs - JSON
 
 **Build & run production app:**
 
@@ -29,5 +30,3 @@ http://localhost:8080/api/v1/calculateStaffRequirements
 Best regards,
 
 Dmitry Ognyannikov
-
-Email: dmitry.ogn@gmail.com
