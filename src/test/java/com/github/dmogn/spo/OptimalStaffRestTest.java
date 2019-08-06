@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.springframework.test.web.servlet.MockMvc;
@@ -25,7 +24,7 @@ public class OptimalStaffRestTest {
     private MockMvc mvc;
     
     @Test
-    public void test() throws Exception {
+    public void testEndpoint() throws Exception {
         final String requestBody = "{ \"rooms\": [35, 21, 17, 28], \"senior\": 10, \"junior\": 6 }";
         
         final MvcResult mvcResult = mvc.perform(
@@ -37,5 +36,20 @@ public class OptimalStaffRestTest {
                 .andReturn();
         
         Assert.assertEquals(200, mvcResult.getResponse().getStatus());
+    }
+    
+    @Test
+    public void testValidation() throws Exception {
+        final String requestBody = "{ \"rooms\": [35, 21, 17, 28], \"senior\": 0, \"junior\": 6 }";
+        
+        final MvcResult mvcResult = mvc.perform(
+                MockMvcRequestBuilders
+                        .post(CALCULATE_STUFF_URI)
+                        .contentType(MediaType.APPLICATION_JSON_VALUE)
+                        .content(requestBody)
+                        .accept(MediaType.APPLICATION_JSON_VALUE))
+                .andReturn();
+        
+        Assert.assertEquals(400, mvcResult.getResponse().getStatus());
     }
 }
