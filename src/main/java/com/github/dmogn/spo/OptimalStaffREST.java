@@ -47,7 +47,7 @@ public class OptimalStaffREST {
         
         for (int rooms : request.getRooms()) {
             if (rooms <=  0 || rooms > Configuration.MAX_ROOMS_COUNT_IN_STRUCTURE) {
-            logger.warn("Input paramater out of range: rooms count > MAX_ROOMS_COUNT_IN_STRUCTURE");
+                logger.warn("Input paramater out of range: rooms count > MAX_ROOMS_COUNT_IN_STRUCTURE");
                 return ResponseEntity.badRequest().build();
             }
         }
