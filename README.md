@@ -27,5 +27,7 @@ http://localhost:8080/api/v1/calculateStaffRequirements
 ```
 
 Best regards,
+
 Dmitry Ognyannikov
+
 Email: dmitry.ogn@gmail.com
